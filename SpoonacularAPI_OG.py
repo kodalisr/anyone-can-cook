@@ -8,7 +8,7 @@ import requests
 import pandas as pd
 from flask import Flask, request, render_template, jsonify
 
-
+# %%
 
 def queryRecipeEndpoint(query, cuisine):
 
@@ -52,7 +52,7 @@ def queryRecipeEndpoint(query, cuisine):
     };
 
     headers = {
-        'x-rapidapi-key': "9e12485098mshdefbf3ff62ef150p1717ddjsn1cf8f48a5741",
+        'x-rapidapi-key': ,
         'x-rapidapi-host': "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
         }
     
@@ -108,7 +108,6 @@ def queryRecipeEndpoint(query, cuisine):
 
 app = Flask(__name__)
 
-
 @app.route('/api/ingredients')
 def ingredients():
     
@@ -120,7 +119,6 @@ def ingredients():
     recipe_json = recipe_df.to_json(orient='records')
     
     return recipe_json
-
 
 # %%
     
